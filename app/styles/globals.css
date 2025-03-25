@@ -1,0 +1,115 @@
+body {
+  background-color: #202938;
+  color: white;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  width: 300px;
+  background-color: #334155;
+  color: white;
+}
+
+.button {
+  background-color: #10b981;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.suggestion-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.suggestion-text {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.suggestion-pill {
+  background-color: #334155;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.refresh-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.error {
+  color: #f87171;
+  margin-top: 1rem;
+}
+
+.insights {
+  margin-top: 2rem;
+  max-width: 700px;
+  text-align: left;
+}
+
+.verse-line {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.insight-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.section-body {
+  line-height: 1.6;
+}
