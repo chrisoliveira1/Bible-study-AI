@@ -1,1 +1,3 @@
-{}
+{
+  "/api/getInsights/route": "app/api/getInsights/route.js"
+}

@@ -1,11 +1,11 @@
 /* globals.css */
 
 body {
+  margin: 0;
+  padding: 0;
   background-color: #202938;
   color: white;
   font-family: system-ui, sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 .container {
@@ -14,55 +14,54 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 1.5rem;
-  text-align: center;
+  padding: 2rem;
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .subtitle {
   font-size: 1rem;
   margin-bottom: 2rem;
+  text-align: center;
   max-width: 500px;
-  line-height: 1.6;
 }
 
 .input-row {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  max-width: 700px;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  width: 100%;
+  max-width: 600px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .input {
   flex: 1;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
+  min-width: 240px;
+  padding: 0.6rem 1rem;
   border: none;
+  border-radius: 6px;
   font-size: 1rem;
-  background-color: #334155;
-  color: white;
 }
 
 .button {
   background-color: #10b981;
   color: white;
-  font-weight: bold;
-  padding: 0 1.25rem;
-  border-radius: 0.5rem;
   border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
-  white-space: nowrap;
 }
 
 .button:disabled {
-  background-color: #047857;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
@@ -70,83 +69,72 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  justify-content: center;
 }
 
 .suggestion-text {
-  color: #cbd5e1;
   font-size: 0.9rem;
 }
 
 .suggestion-pill {
   background-color: #334155;
   color: white;
-  padding: 0.4rem 1rem;
-  border-radius: 999px;
   border: none;
-  cursor: pointer;
+  border-radius: 9999px;
+  padding: 0.3rem 1rem;
   font-size: 0.9rem;
+  cursor: pointer;
 }
 
 .refresh-button {
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
-}
-
-.error {
-  color: #f87171;
-  margin-top: 0.5rem;
-}
-
-.insights {
-  max-width: 700px;
-  text-align: left;
-  margin-top: 2rem;
 }
 
 .verse-line {
   font-style: italic;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.insights {
+  max-width: 700px;
+  padding: 1rem;
 }
 
 .insight-section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-title {
   font-weight: bold;
-  margin-bottom: 0.5rem;
   font-size: 1.1rem;
+  margin-bottom: 0.3rem;
 }
 
 .section-body {
-  line-height: 1.6;
-  color: #e2e8f0;
   font-size: 1rem;
+  line-height: 1.5;
 }
 
-/* 📱 Mobile Fixes */
-@media (max-width: 600px) {
+.error {
+  color: red;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* ✅ Mobile responsive styles */
+@media (max-width: 480px) {
   .input-row {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .button {
+  .input, .button {
     width: 100%;
-    padding: 0.75rem;
-  }
-
-  .input {
-    width: 100%;
-  }
-
-  .suggestion-row {
-    justify-content: center;
-    text-align: center;
   }
 }
