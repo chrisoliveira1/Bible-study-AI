@@ -9,7 +9,7 @@ export default function Home() {
   const [error, setError] = useState('');
   const [insights, setInsights] = useState<any>(null);
 
-  const [suggestions] = useState([
+  const suggestions = [
     'John 3:16', 'Psalm 23:1', 'Romans 8:28', 'Philippians 4:13', 'Genesis 1:1',
     'Proverbs 3:5', 'Jeremiah 29:11', 'Isaiah 41:10', 'Matthew 6:33', 'Hebrews 11:1',
     '2 Timothy 1:7', '1 Corinthians 13:4-5', 'Matthew 28:19-20', 'James 1:2-3', 'John 14:6',
@@ -20,8 +20,14 @@ export default function Home() {
     '1 Corinthians 10:13', 'Proverbs 3:6', 'Romans 6:23', 'Psalm 34:18', 'Matthew 5:16',
     'John 1:1', 'Ephesians 6:11', 'Hebrews 13:8', 'James 5:16', 'John 8:32',
     'Acts 1:8', 'Colossians 3:2', 'Isaiah 26:3', 'Revelation 21:4', 'Romans 15:13'
-  ]);
-  const [currentSuggestionIndex, setCurrentSuggestionIndex] = useState(() => Math.floor(Math.random() * suggestions.length));
+  ];
+
+  const [currentSuggestionIndex, setCurrentSuggestionIndex] = useState(0);
+
+  // ✅ Hydration-safe randomization
+  useEffect(() => {
+    setCurrentSuggestionIndex(Math.floor(Math.random() * suggestions.length));
+  }, []);
 
   const handleSuggestionClick = () => {
     setVerse(suggestions[currentSuggestionIndex]);

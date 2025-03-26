@@ -41,9 +41,9 @@ How does this verse still speak today? What timeless encouragement, challenge, o
 
     const text = completion.choices[0].message.content || '';
 
-    // Pull the full verse using regex
-    const fullVerseMatch = text.match(/says\s+"(.*?)"/);
-    const fullVerse = fullVerseMatch ? fullVerseMatch[1] : '';
+    // Improved full verse extraction
+    const fullVerseMatch = text.match(/says\s+"([^"]{10,500})"/i); // match quote with at least 10 characters
+    const fullVerse = fullVerseMatch ? `${verse} says "${fullVerseMatch[1]}"` : '';
 
     const parseSection = (label: string) => {
       const regex = new RegExp(`${label}:\\s*([\\s\\S]*?)(?=\\n\\n|\\n[A-Z]|$)`, 'i');
